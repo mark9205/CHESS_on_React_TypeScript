@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app::before {
+    z-index: -1;
+    position: absolute;
+    content: url("./assets/background.jpg");
+    opacity: 0.75;
+}
+
+.board {
+    width: calc(80px * 8);
+    height: calc(80px * 8);
+    display: flex;
+    flex-wrap: wrap;
+    border: 30px solid rgba(219, 211, 181, 0.7);
+}
+
+.cell {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black {
+    background-color: rgb(131, 97, 47);
+}
+
+.white {
+    background-color: rgb(218, 207, 173);
+}
+
+.selected {
+    background-color: rgb(218, 149, 0);
+}
+
+.availableForMove {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgba(246, 250, 3, 0.6);
+    box-shadow: 0 0 20px rgb(244, 248, 4),
+                0 0 30px rgb(243, 247, 4),
+                0 0 50px rgb(247, 252, 0);
+}
+
+.lost {
+    height: calc(40vh - 60px);
+    padding: 30px;
+    margin: 30px;
+    background-color: rgb(211, 210, 150);
+    border-radius: 15px;
+}
+
+.lost img{
+    width: 20px;
+    height: 30px;
+
+}
+
+.block {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
